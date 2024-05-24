@@ -1,0 +1,63 @@
+
+
+
+php artisan make:model StockCategory -m
+
+php artisan make:model Company -m
+
+php artisan admin:make CompanyController --model=App\Models\Company
+
+php artisan migrate
+
+php artisan make:migration add_more_data_to_users_table --table=admin_users
+
+php artisan admin:make StockCategoryController --model=App\Models\StockCategory
+
+php artisan make:model StockSubCategory -m
+
+
+php artisan make:model FinancialPeriod -m
+php artisan admin:make FinancialPeriodController --model=App\Models\FinancialPeriod
+
+php artisan admin:make StockSubCategoryController --model=App\Models\StockSubCategory
+
+php artisan admin:make EmployeesController --model=App\Models\User
+
+php artisan make:migration add_email_to_users_table --table=admin_users
+
+php artisan make:model StockItem -m
+php artisan admin:make StockItemController --model=App\Models\StockItem
+
+php artisan make:model Utils
+
+php artisan make:migration add_in_stock_stock_sub_Categories --table=stock_sub_categories
+
+php artisan make:model StockRecord -m
+php artisan admin:make StockRecordController --model=App\Models\StockRecord
+
+php artisan make:migration add_profit_col_stock_records --table=stock_records
+
+php artisan make:migration add_financial_period_id_to --table=stock_records
+
+php artisan make:migration add_currency_to_companies --table=companies
+
+php artisan admin:make CompanyEditController --model=App\Models\Company
+
+php artisan admin:make UserController --model=App\Models\User
+
+
+php artisan migrate
+---
+- This week sales
+- Today's sales
+- Employees total*
+- In Stock
+
+- Financial Perio sales
+- Financial period sales/loses*
+- Stock Cats best/worst
+- Stock suncat - running out, best performance, worst(list)
+- Resent stock items
+- Recent sales(list)
+- Sales by week
+- Stock cats by percentage(pie)
