@@ -83,7 +83,7 @@ Route::get('/stock-sub-categories', function (Request $request) {
     foreach ($sub_categories as $sub_category) {
         $data[] = [
             'id' => $sub_category->id,
-            'text' => $sub_category->name_text . " (" . $sub_category->measuring_unit . ")",
+            'text' => $sub_category->name_text . " (" . $sub_category->measurement_unit . ")",
         ];
     }
 
