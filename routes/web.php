@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('thanks', function () {
     $thanks = [
-        '[NAME] - [AMOUNT], Thank you so much.<br><br>May Allah bless you abundantly.<br>🧎',
-        '[NAME] - [AMOUNT], May Allah reward you abundantly.<br>🧎',
+        '[NAME] - [AMOUNT], Thank you so much.<br><br>May God bless you abundantly.<br>🧎',
+        '[NAME] - [AMOUNT], May God reward you abundantly.<br>🧎',
         '[NAME] - [AMOUNT], Thank you so much for your contribution.<br>🧎',
-        '[NAME] - [AMOUNT], May Allah bless you abundantly.<br>🧎',
-        '[NAME] - [AMOUNT], May Allah reward you abundantly.<br>🧎',
+        '[NAME] - [AMOUNT], May God bless you abundantly.<br>🧎',
+        '[NAME] - [AMOUNT], May God reward you abundantly.<br>🧎',
         '[NAME] - [AMOUNT], Thank you so much for your contribution.<br>🧎',
-        '[NAME] - [AMOUNT], May Allah bless you abundantly.<br>🧎',
+        '[NAME] - [AMOUNT], May God bless you abundantly.<br>🧎',
     ];
     $record = ContributionRecord::find($_GET['id']);
     $msg = $thanks[array_rand($thanks)];
@@ -78,7 +78,7 @@ Route::get('data-exports-print', function () {
         $days_word = 'day';
     }
 
-    echo '📌 *MUBARAKA\'s WEDDING CONTRIBUTIONS*';
+    echo '📌 *MD\'s WEDDING CONTRIBUTIONS*';
     echo '<br><br> 🗓️ : ' . $days_left . " $days_word left";
     echo '<br><br>_*-----SUMMARY-------*_<br>' . "";
 
@@ -110,9 +110,9 @@ Route::get('data-exports-print', function () {
     }
 
     echo "<br><br>----------R.S.V.P:🙏-----------<br>";
-    echo '1. *Siama Saleh* - 0782349228 0706906707<br>';
-    echo '2. *Bwambale Muhidin* - 0762556385 0703903402 <br>';
-    echo '3. *Muhindo Mubaraka* - 0783204665 0706638494<br>';
+    echo '1. *Sieh* - 26562618165<br>';
+    echo '2. *Bw* - 6165562613053 <br>';
+    echo '3. *SS* - 6498654984948<br>';
     echo '<br>*Jazakumullah Khairan* 🧎';
     die();
 });
